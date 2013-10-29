@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @task.task_title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @task.task_description %>
+</p>
+
+<p>
+  <b>Completed:</b>
+  <%= @task.task_completed %>
+</p>
+
+<p>
+  <b>Completed by:</b>
+  <%= @task.task_completedby %>
+</p>
+
+<p>
+  <b>Assigned to:</b>
+  <%= @task.task_assignedto %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @task.task_type %>
+</p>
+
+<p>
+  <b>Date created:</b>
+  <%= @task.task_datecreated %>
+</p>
+
+<p>
+  <b>Createdby:</b>
+  <%= @task.task_createdby %>
+</p>
+
+<p>
+  <b>Product assigned to:</b>
+  <%= @task.task_productassignedto %>
+</p>
+
+<p>
+  <b>Organisation assigned to:</b>
+  <%= @task.task_orgassignedto %>
+</p>
+
+<p>
+  <b>Id org:</b>
+  <%= @task.ID_org %>
+</p>
+
+<p>
+  <b>Id product:</b>
+  <%= @task.ID_product %>
+</p>
+
+<p>
+  <b>Id task:</b>
+  <%= @task.ID_task %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

@@ -1,0 +1,64 @@
+<div class="form wrapper">
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :task_title %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :task_description %>
+  </div>
+  <div class="field">
+    <%= f.label :Completed %>
+    <%= f.check_box :task_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :Complete_by %><br />
+    <%= f.text_field :task_completedby %>
+  </div>
+  <div class="field">
+    <%= f.label :Assigned_to %><br />
+    <%= f.text_field :task_assignedto %>
+  </div>
+  <div class="field">
+    <%= f.label :Type %><br />
+    <%= f.text_field :task_type %>
+  </div>
+  <div class="field">
+    <%= f.label :Date_created %><br />
+    <%= f.text_field :task_datecreated %>
+  </div>
+  <div class="field">
+    <%= f.label :Created_by %><br />
+    <%= f.text_field :task_createdby %>
+  </div>
+  <div class="field">
+    <%= f.label :Product_task_is_assigned_to %><br />
+    <%= f.text_field :task_productassignedto %>
+  </div>
+  <div class="field">
+    <%= f.label :Organisation_assigned_to %><br />
+    <%= f.text_field :task_orgassignedto %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :ID_org %>
+    <%= f.hidden_field :ID_product %>
+    <%= f.hidden_field :ID_task %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
