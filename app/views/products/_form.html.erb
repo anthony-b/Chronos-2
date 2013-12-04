@@ -33,7 +33,8 @@
   </div>
   <div class="field">
     <%= f.label :product_orgID %><br />
-    <%= f.text_field :product_orgID %>
+	<%= f.collection_select :product_orgID, Organisation.order(:org_name),:id,:org_name, include_blank: true %>
+    
   </div>
   <div class="actions">
     <%= f.submit %>

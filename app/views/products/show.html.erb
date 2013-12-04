@@ -29,7 +29,6 @@
   <b>Product orgid:</b>
   <%= link_to @product.product_orgID, :controller => "organisations", :id => @product.product_orgID %>
 </p>
-
-
+<%= link_to 'New Task', new_task_path(@task) %> |
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

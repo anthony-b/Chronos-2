@@ -44,13 +44,13 @@
     <%= f.label :Created_by %><br />
     <%= f.text_field :task_createdby %>
   </div>
-  <div class="field">
-    <%= f.label :Product_task_is_assigned_to %><br />
-    <%= f.text_field :task_productassignedto %>
+    <div class="field">
+    <%= f.label :Organisation_assigned_to %><br />
+   	<%= f.collection_select :task_orgassignedto, Organisation.order(:org_name),:id,:org_name, include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :Organisation_assigned_to %><br />
-    <%= f.text_field :task_orgassignedto %>
+    <%= f.label :Product_task_is_assigned_to %><br />
+	<%= f.collection_select :task_productassignedto, Product.order(:product_name),:id,:product_name, include_blank: true %>
   </div>
   <div class="field">
     <%= f.hidden_field :ID_org %>

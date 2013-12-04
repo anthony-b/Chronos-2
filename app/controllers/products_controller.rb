@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @products }
     end
+	#@organisation = Organisation.all
+	#organisation.org_name
   end
 
   # GET /products/1

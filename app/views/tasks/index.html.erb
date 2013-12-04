@@ -13,8 +13,6 @@
     <th>Createdby</th>
     <th>Product Assigned To</th>
     <th>Org Assigned To</th>
-    <th>Id org</th>
-	<th>Id product</th>
 		<th></th>
 
   </tr>
@@ -30,10 +28,8 @@
     <td><%= task.task_type %></td>
     <td><%= task.task_datecreated %></td>
     <td><%= task.task_createdby %></td>
-    <td><%= task.task_productassignedto %></td>
-    <td><%= task.task_orgassignedto %></td>
-    <td><%= task.ID_org %></td>
-    <td><%= task.ID_product %></td>
+    <td><%= link_to task.task_productassignedto, :controller => "products", :id => task.task_productassignedto %></td>
+	<td><%= link_to task.task_orgassignedto, :controller => "organisations", :id => task.task_orgassignedto %></td>
     <td><%= link_to 'Show', task %><br/>
     <%= link_to 'Edit', edit_task_path(task) %><br/>
     <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -43,4 +39,4 @@
 
 <br />
 
-<%= link_to 'New Task', new_task_path %>
+

@@ -62,10 +62,10 @@ ActiveRecord::Schema.define(:version => 20131029152704) do
     t.string   "ID_org"
     t.string   "ID_product"
     t.integer  "ID_task"
+    t.string   "activity_id"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
     t.integer  "_completedby"
-    t.string   "activity_id"
   end
 
   create_table "users", :force => true do |t|
