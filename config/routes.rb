@@ -1,17 +1,12 @@
 Chronos::Application.routes.draw do
-  resources :task_activities
-
-
-  devise_for :users
+  resources :task_activities 
   resources :products
   resources :organisations
   resources :tasks
-  resource :users do
-    get "users", :to => 'users#index'
-	root :to => 'users#index'
-	end
-  root :to => 'organisations#index'
+
+  root :to => "organisations#index"
   end
+   
    #
 
 
