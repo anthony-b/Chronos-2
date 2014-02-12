@@ -1,9 +1,11 @@
 Chronos::Application.routes.draw do
+  resources :users
+  devise_for :users
   resources :task_activities 
   resources :products
   resources :organisations
   resources :tasks
-
+  #get 'users/sign_in', :to => 'devise/sessions#create', as: 'devise'
   root :to => "organisations#index"
   end
    
